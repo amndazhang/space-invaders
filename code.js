@@ -1,8 +1,3 @@
-/**********************************************************************************
-*   This code is based on a program I wrote on Khan Academy.
-*   Original: https://www.khanacademy.org/computer-programming/amandas-space-invader-game/4522080926482432
-***********************************************************************************/
-
 var x = 0;
 draw = function() {
     background(255, 0, 0);
