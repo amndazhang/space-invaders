@@ -1,16 +1,28 @@
-var x = 0;
-draw = function() {
-    background(255, 0, 0);
-    
-    // snowman
+var x = 200;
+var y = 350;
+var drawCharacter = function() {
     strokeWeight(5);
-    ellipse(200,80,60,60);
-    ellipse(200,150,80,80);
-    ellipse(200,240,100,100);
-    line(100,80,160,150);
-    line(300,80,240,150);
-    
-    // moving circle
-    ellipse(x,300,20,20);
-    x+=5;
+    stroke(255,0,0);
+    arc(x,y,60,50,180,360);
+    stroke(255, 170, 0);
+    arc(x,y,50,40,180,360);
+    stroke(255, 251, 0);
+    arc(x,y,40,30,180,360);
+    stroke(59, 219, 67);
+    arc(x,y,30,20,180,360);
+    stroke(59, 167, 217);
+    arc(x,y,20,10,180,360);
+    stroke(126, 60, 217);
+    arc(x,y,10,0,180,360);
+};
+
+draw = function() {
+    background(132, 137, 148);
+    drawCharacter();
+    if (keyCode === RIGHT){
+        x++;
+    } 
+    if (keyCode === LEFT){
+        x--;
+    }
 };
